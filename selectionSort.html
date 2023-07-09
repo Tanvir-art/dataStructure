@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function selectionSort(arr) {
+  var len = arr.length;
+  
+  for (var i = 0; i < len - 1; i++) {
+    var minIndex = i;
+    
+    for (var j = i + 1; j < len; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
+      }
+    }
+    
+    if (minIndex !== i) {
+      // Swap elements arr[i] and arr[minIndex]
+      var temp = arr[i];
+      arr[i] = arr[minIndex];
+      arr[minIndex] = temp;
+    }
+  }
+  
+  return arr;
+}
+
+// Example usage:
+var unsortedArray = [5, 3, 8, 2, 1, 4];
+var sortedArray = selectionSort(unsortedArray);
+console.log(sortedArray);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let data = [2,5,7,9,12];
+        let find = 9;
+        let start = 0;
+        let end = data.length-1;
+        while(start <= end){
+            let mid = Math.floor((start + end)/2);
+            if(data[mid] === find){
+                console.log("position is " +  mid);
+                break;
+            }else if(data[mid] < find){
+                start = mid + 1;
+            }else{
+                end = mid -1;
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

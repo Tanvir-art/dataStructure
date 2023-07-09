@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // stack
+        let data = [];
+        let currentSize = data.length;
+        let max = 5;
+         function push(newVal){
+            data[currentSize] = newVal;
+            currentSize++;
+         }
+         function pop(){
+            if(currentSize>0){
+                lastElement = data[currentSize-1];
+                currentSize--;
+                data.length = currentSize;
+                return lastElement;
+            }else{
+                console.log("stack is empty");
+            }
+         }
+         function reverseString (item){
+            for(let i =0; i<item.length; i++){
+                push(item[i]);
+            }
+            for(let i =0; i<item.length; i++){
+                item[i]=pop();
+            }
+         }
+         let str = 'tanvir';
+         str = str.split('');
+         reverseString(str);
+         console.log(str.join(''));
+    </script>
+</body>
+</html>
